@@ -12,3 +12,6 @@ class Rectangle:
     def area(self):
         return self.width * self.height
 
+
+rectangle1 = Rectangle(12, 5)
+print(f'rectangle1 perimetr: {rectangle1.perimetr()}, area: {rectangle1.area()}')
