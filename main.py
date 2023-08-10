@@ -1,12 +1,3 @@
-#
-# import re
-#
-# string = '1234567878'
-# result = re.search(r'\d+', string)
-# if result and len(result.group()) == len(string):
-#     print('valid')
-# else:
-#     print('invalid')
 import re
 
 
