@@ -1,40 +1,40 @@
-class Car:
-    def __init__(self, make, model):
-        self.make = make
-        self.model = model
+from abc import ABC, abstractmethod
 
+
+class Car(ABC):
+    @abstractmethod
     def display_info(self):
-        print(f'Car: {self.make} {self.model}')
+        pass
 
 
 class Sedan(Car):
     def __init__(self, make, model, doors_count):
-        super().__init__(make, model)
+        self.make = make
+        self.model = model
         self.doors_count = doors_count
 
     def display_info(self):
-        super().display_info()
-        print(f'Doors: {self.doors_count}')
+        print(f'Car: {self.make} {self.model}\nDoors: {self.doors_count}')
 
 
 class SUV(Car):
     def __init__(self, make, model, seats):
-        super().__init__(make, model)
+        self.make = make
+        self.model = model
         self.seats = seats
 
     def display_info(self):
-        super().display_info()
-        print(f'Seats: {self.seats}')
+        print(f'Car: {self.make} {self.model}\nSeats: {self.seats}')
 
 
 class SportsCar(Car):
     def __init__(self, make, model, max_speed):
-        super().__init__(make, model)
+        self.make = make
+        self.model = model
         self.max_speed = max_speed
 
     def display_info(self):
-        super().display_info()
-        print(f'Max speed: {self.max_speed} km/h')
+        print(f'Car: {self.make} {self.model}\nMax speed: {self.max_speed} km/h')
 
 
 sedan = Sedan("Toyota", "Camry", 4)
