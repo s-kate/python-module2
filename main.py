@@ -7,4 +7,4 @@ class NoDunderAttributes(type):
 
 
 class MyPrivateClass(metaclass=NoDunderAttributes):
-    __secret_attribute = 10
+    secret_attribute = 10
